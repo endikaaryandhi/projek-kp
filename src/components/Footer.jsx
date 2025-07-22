@@ -1,8 +1,5 @@
-// src/components/Footer.jsx
-
 import React from 'react';
 
-// Ikon YouTube (SVG)
 const YouTubeIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -15,14 +12,14 @@ const YouTubeIcon = () => (
 const Footer = () => {
   const links = {
     profil: {
-      visiMisi: '#',
-      struktur: '#',
-      sejarah: '#',
-      tugasFungsi: '#',
+      visiMisi: 'https://binamarga.pu.go.id/balai-jateng-diy/konten/profil/visi-misi',
+      struktur: 'https://binamarga.pu.go.id/balai-jateng-diy/konten/profil/struktur-organisasi',
+      sejarah: 'https://binamarga.pu.go.id/balai-jateng-diy/konten/profil/sejarah',
+      tugasFungsi: 'https://binamarga.pu.go.id/balai-jateng-diy/konten/profil/tugas-dan-fungsi',
     },
     sosial: {
-      instagram: '#',
-      youtube: '#',
+      instagram: 'https://www.instagram.com/pu_jalan_jatengdiy/',
+      youtube: 'https://youtube.com/@pu_jalan_jatengdiy?feature=shared',
     },
     kontak: '#',
   };
