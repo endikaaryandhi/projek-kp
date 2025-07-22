@@ -1,8 +1,13 @@
-// src/App.jsx
-import Dashboard from './pages/Dashboard'
+import React from 'react';
+import Navbar from './components/Navbar';
 
 function App() {
-  return <Dashboard />
+  return (
+    <div className="App">
+      <Navbar />
+      {/* Konten lainnya dari website Anda akan ada di sini */}
+    </div>
+  );
 }
 
-export default App
+export default App;
