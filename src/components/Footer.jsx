@@ -56,16 +56,21 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Kolom 3: Lokasi */}
-          <div>
+            {/* Kolom 3: Lokasi */}
+            <div>
             <h3 className="text-lg font-semibold border-b-2 border-yellow-400 inline-block mb-4">Lokasi</h3>
-            <p className="text-sm leading-relaxed">
-              BBPJN Jawa Tengah - DI Yogyakarta<br />
-              Jl. Soekarno–Hatta Km.26, Bergas,<br />
-              Kabupaten Semarang<br />
-              Jawa Tengah
-            </p>
-          </div>
+            <a
+                href="https://maps.app.goo.gl/w6wHfZMQvK5nDwfbA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-sm leading-relaxed hover:text-yellow-400 transition"
+            >
+                BBPJN Jawa Tengah - DI Yogyakarta<br />
+                Jl. Soekarno–Hatta Km.26, Bergas,<br />
+                Kabupaten Semarang<br />
+                Jawa Tengah
+            </a>
+            </div>
 
           {/* Kolom 4: Kontak */}
           <div>
