@@ -24,7 +24,7 @@ const Pengaduan = () => {
           {/* Jalan Kita */}
           <div className="flex flex-col items-center gap-4 p-6 border rounded-xl shadow hover:shadow-md transition">
             <a
-              href="https://jalankita.pu.go.id"
+              href="https://jalankita.binamarga.pu.go.id"
               target="_blank"
               rel="noopener noreferrer"
             >
