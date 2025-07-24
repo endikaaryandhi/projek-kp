@@ -1,57 +1,77 @@
 // Pengaduan.jsx
 import React from "react";
 import jalanKitaLogo from "../assets/jalankita.png";
-import laporLogo from "../assets/lapor.png"; 
-import bgHeader from "../assets/canguk.jpg"; 
-import ServiceCard from '../components/ServiceCard';
+import laporLogo from "../assets/lapor.png";
+import bgHeader from "../assets/canguk.jpg";
+import ServiceCard from "../components/ServiceCard";
 
-// Data untuk kartu layanan
 const services = [
   {
     imgSrc: jalanKitaLogo,
     title: "Jalan Kita (JAK)",
-    description: "Kerusakan jalan yang termasuk ke dalam jalan nasional dapat melapor melalui Jalan Kita (Jak).",
+    description: "Laporkan kerusakan jalan nasional langsung melalui sistem Jalan Kita (JAK).",
     linkUrl: "https://jalankita.binamarga.pu.go.id",
-    linkText: "Kunjungi Jalan Kita"
+    linkText: "Kunjungi Jalan Kita",
   },
   {
     imgSrc: laporLogo,
     title: "Lapor!",
-    description: "Kerusakan jalan selain jalan nasional dapat melapor melalui Lapor!. Layanan aspirasi dan pengaduan online rakyat.",
+    description: "Laporkan infrastruktur non-nasional lewat LAPOR!, sistem pengaduan nasional.",
     linkUrl: "https://www.lapor.go.id",
-    linkText: "Kunjungi LAPOR!"
-  }
+    linkText: "Kunjungi LAPOR!",
+  },
 ];
 
 const Pengaduan = () => {
   return (
-    <div className="w-full">
-      {/* Hero Section */}
-      <div
-        className="w-full h-[400px] bg-cover bg-center flex items-center justify-center relative"
-        style={{ backgroundImage: `url(${bgHeader})` }}
-      >
-        <div className="absolute inset-0 bg-black opacity-40"></div>
-        <h1 className="text-white text-4xl font-bold relative z-10">Pengaduan</h1>
+    <div className="bg-white font-sans text-sm text-gray-800 min-h-screen">
+    {/* Hero Section */}
+    <section
+      className="relative h-[25rem] md:h-[35rem] bg-cover bg-center flex items-center justify-start"
+      style={{ backgroundImage: `url(${bgHeader})` }}
+    >
+      {/* Overlay gradasi dari kiri ke kanan */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0A1E5D]/90 via-[#1337AD]/20 to-transparent"></div>
+
+      {/* Konten kiri */}
+      <div className="relative z-10 text-white text-left px-4 sm:px-8 md:px-12 max-w-3xl w-full">
+        <div className="ml-0 sm:ml-8 md:ml-16 lg:ml-24">
+          <h1 className="text-2xl md:text-5xl font-bold mb-10 text-justify">
+            Pengaduan
+          </h1>
+          <p className="text-base md:text-lg leading-relaxed text-justify">
+            Halaman ini merupakan halaman Pengaduan yang berisikan
+            pengaduan-pengaduan yang ada pada BBPJN Jateng - DIY
+          </p>
+        </div>
       </div>
 
-      {/* Konten */}
-      <section className="py-16 px-4 md:px-20 text-center">
-        <h2 className="text-3xl font-semibold mb-4">Saluran Pengaduan</h2>
-        <div className="w-24 h-1 bg-yellow-500 mx-auto mb-12 rounded-full"></div>
+      {/* Teks pojok kanan bawah */}
+      <div className="absolute bottom-4 right-4 z-10 text-white text-xs sm:text-sm md:text-base">
+        Underpass Joglo
+      </div>
+    </section>
 
-        {/* Menggunakan ServiceCard dengan .map() */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-          {services.map((service, index) => (
-            <ServiceCard 
-              key={index}
-              imgSrc={service.imgSrc}
-              title={service.title}
-              description={service.description}
-              linkUrl={service.linkUrl}
-              linkText={service.linkText}
-            />
-          ))}
+      {/* Services Section */}
+      <section className="py-12 md:py-16">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-[#0D246D] mb-4">
+            Saluran Pengaduan
+          </h2>
+          <div className="w-24 h-1 bg-yellow-400 mx-auto mb-12 rounded-full"></div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 w-full max-w-3xl mx-auto">
+            {services.map((service, index) => (
+              <ServiceCard
+                key={index}
+                imgSrc={service.imgSrc}
+                title={service.title}
+                description={service.description}
+                linkUrl={service.linkUrl}
+                linkText={service.linkText}
+              />
+            ))}
+          </div>
         </div>
       </section>
     </div>
