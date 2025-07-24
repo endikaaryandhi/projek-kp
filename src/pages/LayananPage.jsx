@@ -7,6 +7,7 @@ import amplogo from '../assets/amp.png';
 import oksiplogo from '../assets/oksip.png';
 import alatlogo from '../assets/alat.png';
 import pengaduanlogo from '../assets/pengaduan.png';
+import bgHeader from "../assets/underpass.png";
 
 const services = [
   {
@@ -57,16 +58,32 @@ const LayananPage = () => {
   return (
     <div className="bg-white font-sans text-sm text-gray-800 min-h-screen">
       
-      {/* Hero Section */}
-      <section
-        className="relative h-56 md:h-64 flex items-center justify-center bg-cover bg-center rounded-b-[60px]"
-        style={{ backgroundImage: "url('/images/hero-layanan.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black opacity-40 rounded-b-[60px]"></div>
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-3xl md:text-5xl font-bold">Layanan</h1>
+    {/* Hero Section */}
+    <section
+      className="relative h-[25rem] md:h-[37rem] bg-cover bg-center flex items-center justify-start"
+      style={{ backgroundImage: `url(${bgHeader})` }}
+    >
+      {/* Overlay gradasi dari kiri ke kanan */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0A1E5D]/90 via-[#1337AD]/20 to-transparent"></div>
+
+      {/* Konten kiri */}
+      <div className="relative z-10 text-white text-left px-4 sm:px-8 md:px-12 max-w-3xl w-full">
+        <div className="ml-0 sm:ml-8 md:ml-16 lg:ml-24">
+          <h1 className="text-2xl md:text-5xl font-bold mb-10 text-justify">
+            Layanan
+          </h1>
+          <p className="text-base md:text-lg leading-relaxed text-justify">
+            Halaman ini merupakan halaman Pengaduan yang berisikan <br/>
+            layanan-layanan yang ada pada BPPJN Jatebg-DIY 
+          </p>
         </div>
-      </section>
+      </div>
+
+      {/* Teks pojok kanan bawah */}
+      <div className="absolute bottom-8 right-8 z-10 text-white text-xs sm:text-sm md:text-base">
+        Underpass Joglo
+      </div>
+    </section>
 
       {/* Services Section */}
       <section className="py-10 md:py-16">

@@ -27,7 +27,7 @@ const Pengaduan = () => {
     <div className="bg-white font-sans text-sm text-gray-800 min-h-screen">
     {/* Hero Section */}
     <section
-      className="relative h-[25rem] md:h-[35rem] bg-cover bg-center flex items-center justify-start"
+      className="relative h-[25rem] md:h-[37rem] bg-cover bg-center flex items-center justify-start"
       style={{ backgroundImage: `url(${bgHeader})` }}
     >
       {/* Overlay gradasi dari kiri ke kanan */}
@@ -47,7 +47,7 @@ const Pengaduan = () => {
       </div>
 
       {/* Teks pojok kanan bawah */}
-      <div className="absolute bottom-4 right-4 z-10 text-white text-xs sm:text-sm md:text-base">
+      <div className="absolute bottom-8 right-8 z-10 text-white text-xs sm:text-sm md:text-base">
         Underpass Joglo
       </div>
     </section>
