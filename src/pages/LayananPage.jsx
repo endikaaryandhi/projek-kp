@@ -12,44 +12,44 @@ const services = [
   {
     imgSrc: laporLogo,
     title: 'Permohonan Informasi Publik',
-    description: 'Ajukan permintaan informasi publik secara resmi dan mudah.',
-    linkUrl: 'https://ppid.pu.go.id',
-    linkText: 'Ajukan Permohonan',
+    description: "Jika ingin melakukan permohonan informasi publik silahkan klik tombol di bawah",
+    linkUrl: "https://www.lapor.go.id/",
+    clickable: "true"
   },
   {
     imgSrc: dokumenlogo,
     title: 'Laboratorium Pengujian Material Bahan Jalan',
-    description: 'Layanan uji material jalan dengan standar akreditasi nasional.',
-    linkUrl: 'https://example.com/lab-material',
-    linkText: 'Lihat Info Lab',
+    description: "Jika ingin mengetahui tentang alur pelayanan pengujian silahkan klik tombol di bawah",
+    linkUrl: "/layanan/Laboratorium",
+    clickable: "true"
   },
   {
-    imgSrc: amplogo,
-    title: 'Sertifikasi AMP',
-    description: 'Pengajuan sertifikasi untuk Asphalt Mixing Plant (AMP).',
-    linkUrl: 'https://example.com/sertifikasi-amp',
-    linkText: 'Ajukan Sertifikasi',
+    imgSrc: amplogo, 
+    title: 'Sertifikasi Asphalt Mixing Plant (AMP)',
+    description: "Jika ingin mengetahui tentang alur sertifikasi AMP silahkan klik tombol di bawah",
+    linkUrl: "/layanan/Sertifikasi",
+    clickable: "true"
   },
   {
-    imgSrc: oksiplogo,
-    title: 'Perizinan Jalan Nasional',
-    description: 'Permohonan izin pemanfaatan jalan nasional secara daring.',
-    linkUrl: 'https://perizinan.pu.go.id',
-    linkText: 'Ajukan Izin',
+    imgSrc: oksiplogo, 
+    title: 'Perizinan Pemanfaatan Bagian-Bagian Jalan Nasional',
+    description: "Jika ingin melakukan perizinan pemanfaatan bagian-bagian jalan nasional silahkan klik tombol di bawah",
+    linkUrl: "https://oksip.pu.go.id",
+    clickable: "true"
   },
   {
-    imgSrc: alatlogo,
-    title: 'Peminjaman Alat Konstruksi',
-    description: 'Sewa alat konstruksi dengan prosedur yang mudah dan cepat.',
-    linkUrl: 'https://example.com/peminjaman-alat',
-    linkText: 'Sewa Alat',
+    imgSrc: alatlogo, 
+    title: 'Peminjaman Peralatan Konstruksi dengan Cara Sewa',
+    description: "Jika ingin mengetahui tentang alur sertifikasi AMP silahkan klik tombol di bawah",
+    linkUrl: "/layanan/Peminjaman",
+    clickable: "true"
   },
   {
     imgSrc: pengaduanlogo,
     title: 'Pengaduan',
-    description: 'Laporkan keluhan atau masalah terkait infrastruktur jalan.',
-    linkUrl: 'https://lapor.go.id',
-    linkText: 'Laporkan Sekarang',
+    description: "Jika ingin mengetahui tentang alur sertifikasi AMP silahkan klik tombol di bawah",
+    linkUrl: "/pengaduan",
+    clickable: "true"
   },
 ];
 
@@ -85,7 +85,7 @@ const LayananPage = () => {
                 title={service.title}
                 description={service.description}
                 linkUrl={service.linkUrl}
-                linkText={service.linkText}
+                clickable={service.clickable}
               />
             ))}
           </div>

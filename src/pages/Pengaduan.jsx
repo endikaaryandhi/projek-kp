@@ -9,17 +9,17 @@ const services = [
   {
     imgSrc: jalanKitaLogo,
     title: "Jalan Kita (JAK)",
-    description: "Laporkan kerusakan jalan nasional langsung melalui sistem Jalan Kita (JAK).",
+    description: "Jika anda menemukan kerusakan jalan di wilayah BBPJN Jateng-DIY silahkan unduh aplikasi Jalan Kita dengan melalui web atau aplikasi mobile app dengan menekan tombol di bawah",
     linkUrl: "https://jalankita.binamarga.pu.go.id",
-    linkText: "Kunjungi Jalan Kita",
+    linkText: "Jalan Kita"
   },
   {
     imgSrc: laporLogo,
     title: "Lapor!",
-    description: "Laporkan infrastruktur non-nasional lewat LAPOR!, sistem pengaduan nasional.",
+    description: "Jika ada keluhan, saran, atau infrastruktur wilayah BBPJN Jateng-DIY yang mengalami kerusakan, silahkan lapor dengan menekan tombol di bawah",
     linkUrl: "https://www.lapor.go.id",
-    linkText: "Kunjungi LAPOR!",
-  },
+    linkText: "LAPOR!"
+  }
 ];
 
 const Pengaduan = () => {
