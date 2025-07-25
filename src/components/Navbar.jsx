@@ -17,21 +17,15 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="bg-white border-b border-gray-200 px-4 sm:px-6 md:px-10 py-3 font-semibold shadow-sm"
+      className="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-200 px-4 sm:px-6 md:px-10 py-3 font-semibold shadow-md"
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: 'spring', stiffness: 80, damping: 20 }}
     >
-        <div className="flex items-center justify-between">
-        {/* Logo ujung kiri */}
-        <div className="flex items-center">
-          <img src={logo} alt="Logo" className="h-10 sm:h-11 md:h-12 lg:h-14" />
-        </div>
-          <div className="max-w-screen-xl mx-auto flex justify-between items-center">
-
-        {/* Hamburger */}
+        <div className="relative flex items-center justify-between">
+        {/* Hamburger di ujung kanan */}
         <button
-          className="md:hidden text-gray-700 focus:outline-none"
+          className="absolute right-4 top-4 md:hidden text-gray-700 z-10"
           onClick={toggleMenu}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -42,6 +36,16 @@ const Navbar = () => {
             )}
           </svg>
         </button>
+        </div>
+
+        <div className="relative flex items-center justify-between">
+        {/* Logo ujung kiri */}
+        <div className="flex items-center">
+          <Link to="/" className="flex items-center">
+            <img src={logo} alt="Logo" className="h-10 sm:h-11 md:h-12 lg:h-14 cursor-pointer" />
+          </Link>
+        </div>
+          <div className="max-w-screen-xl mx-auto flex justify-between items-center">
         </div>
 
         {/* Menu Desktop */}

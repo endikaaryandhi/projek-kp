@@ -90,10 +90,10 @@ const LayananPage = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-center text-[#0D246D] mb-4">
             Layanan Kami
           </h2>
-          <div className="w-24 h-1 bg-yellow-400 mx-auto mb-12 rounded-full"></div>
+          <div className="w-24 h-1 bg-yellow-400 mx-auto mb-8 rounded-full"></div>
 
           {/* Grid Service Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8">
             {services.map((service, index) => (
               <ServiceCard
                 key={index}
