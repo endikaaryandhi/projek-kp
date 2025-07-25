@@ -8,6 +8,7 @@ import Pengaduan from './pages/Pengaduan';
 import Laboratorium from './pages/Laboratorium';
 import Sertifikasi from './pages/Sertifikasi'
 import Peminjaman from './pages/Peminjaman'
+import Beranda from './pages/Beranda'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Navbar />
         <main className="flex-grow">
           <Routes>
+            <Route path="/" element={<Beranda />} />
             <Route path="/pengaduan" element={<Pengaduan />} />
             <Route path="/layanan" element={<LayananPage />} />
             <Route path="/layanan/Laboratorium" element={<Laboratorium />} />

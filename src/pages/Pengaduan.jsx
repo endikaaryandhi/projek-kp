@@ -48,7 +48,7 @@ const Pengaduan = () => {
 
       {/* Teks pojok kanan bawah */}
       <div className="absolute bottom-8 right-8 z-10 text-white text-xs sm:text-sm md:text-base">
-        Underpass Joglo
+        Flyover Canguk Magelang
       </div>
     </section>
 
