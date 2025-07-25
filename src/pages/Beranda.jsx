@@ -46,22 +46,22 @@ const HomePage = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-[#0A1E5D]/90 via-[#1337AD]/20 to-transparent z-0" />
 
         <div className="relative z-10 pl-6 md:pl-[200px]">
-          <div className="relative w-[320px] md:w-[525px] h-[100px] bg-blue-500/50 rounded-[10px]">
+          <div className="relative w-[320px] md:w-[510px] h-[100px] bg-blue-500/50 rounded-[10px]">
             <div className="absolute top-6 left-6 w-[290px] md:w-[500px] h-[90px] bg-yellow-400/60 rounded-[10px] z-10" />
             <div className="absolute top-10 left-6 md:left-10 text-white text-xl md:text-[48px] font-bold z-20">
               Website Pelayanan
             </div>
           </div>
 
-          <div className="mt-8 ml-4">
+          <div className="mt-10 ml-4">
             <a
               href="/layanan"
-              className="relative inline-block rounded-full bg-gradient-to-r from-[#007AFF] to-[#FFCC00] p-[3px]"
+              className="relative inline-block rounded-full bg-gradient-to-r from-[#007AFF80] to-[#FFCC0080] p-[5px]"
             >
-              <span className="block rounded-full bg-black/80 text-white font-bold py-4 px-10 text-xl hover:bg-black/65 transition-colors duration-300">
+              <span className="block rounded-full bg-black/60 text-white font-bold py-4 px-14 text-2xl hover:bg-black/45 transition-colors duration-300">
                 LAYANAN
               </span>
-            </a>
+            </a>    
           </div>
         </div>
       </section>

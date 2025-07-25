@@ -34,7 +34,7 @@ const Pengaduan = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-[#0A1E5D]/90 via-[#1337AD]/20 to-transparent"></div>
 
       {/* Konten kiri */}
-      <div className="relative z-10 text-white text-left px-4 sm:px-8 md:px-12 max-w-3xl w-full">
+      <div className="relative z-10 text-white text-left px-4 sm:px-8 md:px-12 max-w-2xl w-full">
         <div className="ml-0 sm:ml-8 md:ml-16 lg:ml-24">
           <h1 className="text-2xl md:text-5xl font-bold mb-10 text-justify">
             Pengaduan
