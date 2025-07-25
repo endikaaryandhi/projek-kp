@@ -1,6 +1,5 @@
 import React, { useState } from "react"; 
 import ServiceCard from '../components/ServiceCard';
-import Survey from '../components/Survey';
 import laporLogo from '../assets/lapor.png';
 import dokumenlogo from '../assets/dokumen.png';
 import amplogo from '../assets/amp.png';
@@ -55,7 +54,6 @@ const services = [
 ];
 
 const LayananPage = () => {
-  const [modalOpen, setModalOpen] = useState(false);
   return (
     <div className="bg-white font-sans text-sm text-gray-800 min-h-screen">
       
@@ -109,67 +107,6 @@ const LayananPage = () => {
           </div>
         </div>
       </section>
-      {/* Tombol & Modal Rate Us */}
-<button
-  onClick={() => setModalOpen(true)}
-  style={{
-    position: "fixed",
-    bottom: "20px",
-    right: "20px",
-    backgroundColor: "#1e40af",
-    color: "white",
-    padding: "10px 18px",
-    borderRadius: "9999px",
-    fontWeight: "bold",
-    fontSize: "12px",
-    zIndex: 9999,
-    boxShadow: "0 4px 6px rgba(0,0,0,0.1)"
-  }}
->
-  Rate Us!
-</button>
-
-{modalOpen && (
-  <div
-    style={{
-      position: "fixed",
-      inset: 0,
-      backgroundColor: "rgba(0,0,0,0.4)",
-      zIndex: 9998,
-      padding: "40px"
-    }}
-  >
-    <div style={{
-      backgroundColor: "white",
-      margin: "auto",
-      maxWidth: "1000px",
-      height: "90vh",
-      borderRadius: "16px",
-      overflow: "auto",
-      position: "relative"
-    }}>
-      <button
-        onClick={() => setModalOpen(false)}
-        style={{
-          position: "absolute",
-          top: "10px",
-          right: "20px",
-          fontSize: "24px",
-          background: "none",
-          border: "none",
-          color: "#333",
-          fontWeight: "bold",
-          cursor: "pointer"
-        }}
-      >
-        &times;
-      </button>
-
-      <Survey/>
-    </div>
-  </div>
-)}
-
     </div>
   );
 };

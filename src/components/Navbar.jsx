@@ -22,11 +22,12 @@ const Navbar = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: 'spring', stiffness: 80, damping: 20 }}
     >
-      <div className="max-w-screen-xl mx-auto flex justify-between items-center">
-        {/* Logo */}
+        <div className="flex items-center justify-between">
+        {/* Logo ujung kiri */}
         <div className="flex items-center">
-          <img src={logo} alt="Logo" className="h-10 sm:h-11 md:h-12 lg:h-14 mr-3 sm:mr-4" />
+          <img src={logo} alt="Logo" className="h-10 sm:h-11 md:h-12 lg:h-14" />
         </div>
+          <div className="max-w-screen-xl mx-auto flex justify-between items-center">
 
         {/* Hamburger */}
         <button
@@ -41,6 +42,7 @@ const Navbar = () => {
             )}
           </svg>
         </button>
+        </div>
 
         {/* Menu Desktop */}
         <ul className="hidden md:flex items-center space-x-6">
@@ -50,7 +52,7 @@ const Navbar = () => {
               <li key={name} className={`border-b-2 ${isActive ? 'border-yellow-500' : 'border-transparent'}`}>
                 <Link
                   to={path}
-                  className={`no-underline text-sm pb-1 transition-colors duration-300 ${
+                  className={`no-underline text-base pb-1 transition-colors duration-300 ${
                     isActive ? 'text-black font-bold' : 'text-gray-600 hover:text-black'
                   }`}
                 >

@@ -12,7 +12,7 @@ const SurveyPage = () => {
     const formData = new FormData(form);
 
     try {
-      const responseScript = await fetch("https://script.google.com/macros/s/AKfycbxHH5CJayPUdyvNGTi5G716BkztpTvLR7vsUCrmHE9i4HKjBb3uRCF0MYcJOCpwHlg9/exec", {
+      const responseScript = await fetch("https://script.google.com/macros/s/AKfycbyYE1NctN4xf--qMQ7UYwNlB6O6EVRbS3QQdFUMHrGYzUu5JouFfNdov-tYWe2XZW3X/exec", {
         method: "POST",
         body: formData,
       });
@@ -95,7 +95,7 @@ const SurveyPage = () => {
 
           <div>
             <label className="font-semibold">Pendidikan Terakhir <span className="text-red-500">*</span></label>
-            <input name="Pendidikan Terakhir" required className="w-full border p-2 rounded-md mt-1 font-semibold" />
+            <input name="Pendidikan Terakhir" required className="w-full border p-2 rounded-md mt-1" />
           </div>
 
           {/* Pertanyaan 1–9 */}

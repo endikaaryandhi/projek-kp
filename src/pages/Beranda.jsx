@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import HeroBackground from '../assets/flyover.jpeg'; 
 import PanduanImage from '../assets/panduan.png'; 
+import Survey from '../components/Survey';
 
 // FAQ 
 const FaqItem = ({ question, children }) => {
@@ -24,7 +25,7 @@ const FaqItem = ({ question, children }) => {
         </svg>
       </button>
       {isOpen && (
-        <div className="pb-4 px-2 text-gray-600">
+        <div className="pb-4 px-2 text-gray-600 text-base md:text-lg">
           {children}
         </div>
       )}
@@ -32,34 +33,44 @@ const FaqItem = ({ question, children }) => {
   );
 };
 
-
 const HomePage = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <div className="bg-white">
-      {/*BAGIAN HEADER*/}
+      {/* HEADER */}
       <section
         className="relative h-[25rem] md:h-[37rem] bg-cover bg-center flex items-center justify-start"
         style={{ backgroundImage: `url(${HeroBackground})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0A1E5D]/90 via-[#1337AD]/20 to-transparent"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold text-white tracking-wide mb-6">
-            Website Pelayanan
-          </h1>
-          <a
-            href="/layanan"
-            className="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-blue-900 transition-colors duration-300"
-          >
-            LAYANAN
-          </a>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A1E5D]/90 via-[#1337AD]/20 to-transparent z-0" />
+
+        <div className="relative z-10 pl-6 md:pl-[200px]">
+          <div className="relative w-[320px] md:w-[525px] h-[100px] bg-blue-500/50 rounded-[10px]">
+            <div className="absolute top-6 left-6 w-[290px] md:w-[500px] h-[90px] bg-yellow-400/60 rounded-[10px] z-10" />
+            <div className="absolute top-10 left-6 md:left-10 text-white text-xl md:text-[48px] font-bold z-20">
+              Website Pelayanan
+            </div>
+          </div>
+
+          <div className="mt-8 ml-4">
+            <a
+              href="/layanan"
+              className="relative inline-block rounded-full bg-gradient-to-r from-[#007AFF] to-[#FFCC00] p-[3px]"
+            >
+              <span className="block rounded-full bg-black/80 text-white font-bold py-4 px-10 text-xl hover:bg-black/65 transition-colors duration-300">
+                LAYANAN
+              </span>
+            </a>
+          </div>
         </div>
       </section>
 
-      {/*PENGERTIAN*/}
+      {/* PENGERTIAN */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Pengertian</h2>
-          <div className="max-w-3xl mx-auto text-left text-gray-700 space-y-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-gray-800 mb-10">Pengertian</h2>
+          <div className="max-w-5xl mx-auto text-base md:text-xl text-gray-700 space-y-4 text-justify px-4">
             <p>
               Website ini merupakan sarana digital yang dikembangkan oleh Balai Besar Pelaksanaan Jalan Nasional Jawa Tengah - D.I. Yogyakarta sebagai media informasi, layanan, serta Pengaduan dan regulasi yang berkaitan dengan pelayanan di Balai Besar Pelaksanaan Jalan Nasional Jawa Tengah - D.I. Yogyakarta.
             </p>
@@ -80,42 +91,68 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/*BAGIAN PANDUAN*/}
-      <section className="py-16">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8">PANDUAN</h2>
+      {/* PANDUAN */}
+      <section className="py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-gray-800 mb-8">PANDUAN</h2>
           <img 
             src={PanduanImage} 
             alt="Panduan Penggunaan Website" 
-            className="mx-auto max-w-full h-auto"
+            className="mx-auto w-full max-w-3xl h-auto shadow-2xl rounded-md"
           />
         </div>
       </section>
       
-      {/*BAGIAN FAQ*/}
-      <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-6 max-w-3xl">
-              <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">FAQs</h2>
-              <div className="space-y-2">
-                  <FaqItem question="Ada apa saja pada pelayanan">
-                      <p>Jawaban untuk pertanyaan ini akan ditampilkan di sini ketika pengguna mengklik.</p>
-                  </FaqItem>
-                  <FaqItem question="Ada apa saja pada pelayanan">
-                      <p>Ini adalah jawaban untuk pertanyaan kedua. Anda bisa memasukkan konten HTML apa pun di sini.</p>
-                  </FaqItem>
-                  <FaqItem question="Ada apa saja pada pelayanan">
-                      <p>Jawaban untuk pertanyaan ketiga.</p>
-                  </FaqItem>
-                  <FaqItem question="Ada apa saja pada pelayanan">
-                      <p>Jawaban untuk pertanyaan keempat.</p>
-                  </FaqItem>
-                  <FaqItem question="Ada apa saja pada pelayanan">
-                      <p>Jawaban untuk pertanyaan kelima.</p>
-                  </FaqItem>
-              </div>
+      {/* FAQ */}
+      <section className="py-10 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center">FAQs</h2>
+          <div className="space-y-2">
+            <FaqItem question="Ada apa saja pada pelayanan">
+              <p>Jawaban untuk pertanyaan ini akan ditampilkan di sini ketika pengguna mengklik.</p>
+            </FaqItem>
+            <FaqItem question="Ada apa saja pada pelayanan">
+              <p>Ini adalah jawaban untuk pertanyaan kedua. Anda bisa memasukkan konten HTML apa pun di sini.</p>
+            </FaqItem>
+            <FaqItem question="Ada apa saja pada pelayanan">
+              <p>Jawaban untuk pertanyaan ketiga.</p>
+            </FaqItem>
+            <FaqItem question="Ada apa saja pada pelayanan">
+              <p>Jawaban untuk pertanyaan keempat.</p>
+            </FaqItem>
+            <FaqItem question="Ada apa saja pada pelayanan">
+              <p>Jawaban untuk pertanyaan kelima.</p>
+            </FaqItem>
           </div>
+        </div>
       </section>
 
+      {/* Tombol Gambar Modal */}
+      <button
+        onClick={() => setModalOpen(true)}
+        className="fixed bottom-5 right-5 z-[9999] p-0 border-0 bg-transparent cursor-pointer"
+      >
+        <img
+          src="https://sahabat.pu.go.id/traffic/img/modal-logo.png"
+          alt="Buka Survei"
+          className="h-[100px] md:h-[150px] w-auto"
+        />
+      </button>
+
+      {/* Modal */}
+      {modalOpen && (
+        <div className="fixed inset-0 bg-black/40 z-[9998] p-4 md:p-10 flex items-center justify-center">
+          <div className="bg-white w-full max-w-[1000px] h-[90vh] rounded-2xl overflow-auto relative shadow-xl">
+            <button
+              onClick={() => setModalOpen(false)}
+              className="absolute top-2 right-4 text-3xl font-bold text-gray-600 hover:text-gray-800"
+            >
+              &times;
+            </button>
+            <Survey />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
