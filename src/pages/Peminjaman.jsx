@@ -1,6 +1,7 @@
 import React from 'react';
 import Alatalat from '../assets/alatalat.png'; // <-- Ganti dengan path gambar latar belakang Anda
 import Alatlogo from '../assets/alat.png'; // <-- Ganti dengan path ikon Anda
+import kontruksi from '../assets/konstruksi.png';
 
 const AmpPage = () => {
   return (
@@ -35,27 +36,34 @@ const AmpPage = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
             Informasi Layanan
           </h2>
-          <p className="mb-4 text-lg leading-relaxed">
-            Sertifikasi Asphalt Mixing Plant (AMP) adalah proses penting untuk memastikan bahwa fasilitas produksi aspal Anda memenuhi standar kualitas dan keamanan yang ditetapkan. Layanan ini mencakup inspeksi, pengujian, dan verifikasi untuk menjamin AMP beroperasi secara optimal dan menghasilkan campuran aspal yang sesuai dengan spesifikasi teknis.
+          <p className="mb-8 text-lg leading-relaxed text-justify">
+            Laboratorium Pengujian Material Bahan Jalan bertujuan untuk memastikan bahwa material yang digunakan dalam pembangunan infrastruktur memenuhi standar mutu dan keselamatan yang ditetapkan.
           </p>
           
-          <hr className="my-8" />
+          <img 
+            src={kontruksi} 
+            alt="Pelayanan Pengujian" 
+            className="w-full max-w-3xl mx-auto rounded-lg shadow-md mb-8"
+          />
 
           <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-            Prosedur Pengajuan Sertifikasi
+            Prosedur Pelayan Penggunaan Peralatan Konstruksi dengan Cara Sewa
           </h3>
           <ol className="list-decimal list-inside space-y-3">
-            <li>Mengajukan surat permohonan yang ditujukan kepada Kepala Balai.</li>
-            <li>Melampirkan dokumen-dokumen teknis yang diperlukan.</li>
-            <li>Tim teknis akan melakukan verifikasi dan penjadwalan kunjungan lapangan.</li>
-            <li>Inspeksi dan pengujian di lokasi AMP oleh tim ahli.</li>
-            <li>Penerbitan sertifikat jika semua persyaratan telah terpenuhi.</li>
+            <li>PENYEWA Mengajukan permohonan peminjaman peralatan konstruksi kepada Kepala BBPJN Jateng-DIY.</li>
+            <li>PENYEWA & KOORDINATOR PERALATAN BBPJN JATENG - DIY Melakukan koordinasi kesiapan alat.</li>
+            <li>KEPALA BBPJN JATENG - DIY Surat Persetujuan Peminjaman Alat.</li>
+            <li>PENYEWA & PPK PERALATAN BBPJN JATENG - DIY Berita Acara Serah Terima Pengambilan Peminjaman Peralatan.</li>
+            <li>PENYEWA Melakukan pembayaran biaya sewa alat melalui Bendahara penerimaan BBPJN Jateng - DIY (PNPB).</li>
+            <li>PENYEWA & KOORDINATOR PERALATAN BBPJN JATENG - DIY Berita Acara Serah Terima Pengambilan Peminjaman Peralatan.</li>
+            <li>OPERASIONAL PERALATAN Sesuai dengan jangka waktu dan ketentuan dalam Surat Perjanjian Peminjaman Peralatan.</li>
+            <li>PENYEWA & KOORDINATOR PERALATAN BBPJN JATENG - DIY Berita Acara Serah Terima Pengembalian Peralatan.</li>
           </ol>
 
           <div className="mt-10 p-6 bg-blue-50 border-l-4 border-blue-500">
             <h4 className="font-bold text-gray-900">Butuh Bantuan?</h4>
             <p className="mt-1">
-              Untuk informasi lebih lanjut atau konsultasi, silakan hubungi kami melalui halaman <a href="/kontak" className="text-blue-600 hover:underline font-semibold">Kontak</a>.
+              Untuk informasi lebih lanjut atau konsultasi, silakan hubungi kami melalui <a href="https://wa.me/p/9899826426750670/628112663464" className="text-blue-600 hover:underline font-semibold" target="_blank" rel="noopener noreferrer">Kontak</a>.
             </p>
           </div>
         </div>

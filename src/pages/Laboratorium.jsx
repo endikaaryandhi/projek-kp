@@ -1,6 +1,7 @@
 import React from 'react';
 import labmatebg from '../assets/labmate.png'; // <-- Ganti dengan path gambar latar belakang Anda
 import Dokumen from '../assets/dokumen.png'; // <-- Ganti dengan path ikon Anda
+import pelayanan from '../assets/pelyanan-pengujian.png';
 
 const AmpPage = () => {
   return (
@@ -35,27 +36,37 @@ const AmpPage = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
             Informasi Layanan
           </h2>
-          <p className="mb-4 text-lg leading-relaxed">
-            Sertifikasi Asphalt Mixing Plant (AMP) adalah proses penting untuk memastikan bahwa fasilitas produksi aspal Anda memenuhi standar kualitas dan keamanan yang ditetapkan. Layanan ini mencakup inspeksi, pengujian, dan verifikasi untuk menjamin AMP beroperasi secara optimal dan menghasilkan campuran aspal yang sesuai dengan spesifikasi teknis.
+          <p className="mb-8 text-lg leading-relaxed text-justify">
+            Laboratorium Pengujian Material Bahan Jalan bertujuan untuk memastikan bahwa material yang digunakan dalam pembangunan infrastruktur memenuhi standar mutu dan keselamatan yang ditetapkan.
           </p>
           
-          <hr className="my-8" />
+          <img 
+            src={pelayanan} 
+            alt="Pelayanan Pengujian" 
+            className="w-full max-w-3xl mx-auto rounded-lg shadow-md mb-8"
+          />
 
           <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-            Prosedur Pengajuan Sertifikasi
+            Prosedur Pelayanan Pengujian
           </h3>
           <ol className="list-decimal list-inside space-y-3">
-            <li>Mengajukan surat permohonan yang ditujukan kepada Kepala Balai.</li>
-            <li>Melampirkan dokumen-dokumen teknis yang diperlukan.</li>
-            <li>Tim teknis akan melakukan verifikasi dan penjadwalan kunjungan lapangan.</li>
-            <li>Inspeksi dan pengujian di lokasi AMP oleh tim ahli.</li>
-            <li>Penerbitan sertifikat jika semua persyaratan telah terpenuhi.</li>
+            <li>Pemohon mengajukan permohonan pengujian kepada Kepala BBPJN Jateng - DIY.</li>
+            <li>DIV ADM APPS melakukan evaluasi kecukupan sampe dan persyaratan administrasi.</li>
+            <li>DIV ADM APPS menyampaian surat balasan kepada Pemohon.</li>
+            <li>Pemohon melakukan pembayaran dan dikonfirmasi oleh DIV ADM UPPS.</li>
+            <li>DIV TEKNIK UPPS mengkaji ulang permintaan pengujian.</li>
+            <li>Pemohon & DIV ADM UPPS melakukan perikatan kontrak pengujian.</li>
+            <li>DIV TEKNIK UPPS Penerbitan Surat Perintah Kerja Pengujian.</li>
+            <li>DIV TEKNIK UPPS melaksanaan Pengujian.</li>
+            <li>DIV TEKNIK UPPS melakukan pengolahaan data dan validasi laporan hasil pengujian.</li>
+            <li>DIV ADM UPPS menyampaikan hasil Laporan Hasil Pengujian kepada Pemohon.</li>
+            <li>DIV MUTU menyampaikan Umpan Balik & Pengaduan kepada Pemohon.</li>
           </ol>
 
           <div className="mt-10 p-6 bg-blue-50 border-l-4 border-blue-500">
             <h4 className="font-bold text-gray-900">Butuh Bantuan?</h4>
             <p className="mt-1">
-              Untuk informasi lebih lanjut atau konsultasi, silakan hubungi kami melalui halaman <a href="/kontak" className="text-blue-600 hover:underline font-semibold">Kontak</a>.
+              Untuk informasi lebih lanjut atau konsultasi, silakan hubungi kami melalui <a href="https://wa.me/p/23906094625650968/628112663464" className="text-blue-600 hover:underline font-semibold" target="_blank" rel="noopener noreferrer">Kontak</a>.
             </p>
           </div>
         </div>

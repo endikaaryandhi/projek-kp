@@ -19,7 +19,7 @@ const ServiceCard = ({ imgSrc, title, description, linkUrl, linkText, clickable 
 
     {/* Back */}
     <div className="absolute inset-0 bg-white p-6 rounded-xl border border-gray-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-      <div className="flex flex-col items-center justify-center h-full text-center gap-4">
+      <div className="flex flex-col items-center justify-center h-full text-center gap-2">
         <p className="text-sm text-gray-700">{description}</p>
 
         {/* Tampilkan tombol biru hanya jika tidak clickable */}

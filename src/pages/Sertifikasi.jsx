@@ -1,6 +1,7 @@
 import React from 'react';
 import labmatebg from '../assets/labmate.png'; // <-- Ganti dengan path gambar latar belakang Anda
 import amplogo from '../assets/amp.png'; // <-- Ganti dengan path ikon Anda
+import sertifikasi from '../assets/Sertifikasi-AMP.png';
 
 const AmpPage = () => {
   return (
@@ -35,27 +36,32 @@ const AmpPage = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
             Informasi Layanan
           </h2>
-          <p className="mb-4 text-lg leading-relaxed">
+          <p className="mb-8 text-lg leading-relaxed text-justify">
             Sertifikasi Asphalt Mixing Plant (AMP) adalah proses penting untuk memastikan bahwa fasilitas produksi aspal Anda memenuhi standar kualitas dan keamanan yang ditetapkan. Layanan ini mencakup inspeksi, pengujian, dan verifikasi untuk menjamin AMP beroperasi secara optimal dan menghasilkan campuran aspal yang sesuai dengan spesifikasi teknis.
           </p>
           
-          <hr className="my-8" />
+          <img 
+            src={sertifikasi} 
+            alt="Sertifikasi AMP" 
+            className="w-full max-w-3xl mx-auto rounded-lg shadow-md mb-8"
+          />
 
           <h3 className="text-2xl font-semibold text-gray-900 mb-4">
             Prosedur Pengajuan Sertifikasi
           </h3>
           <ol className="list-decimal list-inside space-y-3">
-            <li>Mengajukan surat permohonan yang ditujukan kepada Kepala Balai.</li>
-            <li>Melampirkan dokumen-dokumen teknis yang diperlukan.</li>
-            <li>Tim teknis akan melakukan verifikasi dan penjadwalan kunjungan lapangan.</li>
-            <li>Inspeksi dan pengujian di lokasi AMP oleh tim ahli.</li>
-            <li>Penerbitan sertifikat jika semua persyaratan telah terpenuhi.</li>
+            <li>Pemohon mengajukan Permohonan Sertifikasi AMP Kepada Kepala Balai.</li>
+            <li>Tim Pemeriksa AMP memberitahukan Jadwal Pemeriksaan AMP Kepada Pemohon.</li>
+            <li>Melaksanakan Pemeriksaan Kelaikan Operasi AMP.</li>
+            <li>Hasil Pemeriksaan Kelaikan Operasi AMP.</li>
+            <li>Tim Pemeriksa AMP Mengajukan Penerbitan Sertifikat Laik Operasi AMP.</li>
+            <li>Kepala BBPJN Jateng-DIY menyetujui Sertifikat Laik Operasi AMP yang di Ajukan.</li>
           </ol>
 
           <div className="mt-10 p-6 bg-blue-50 border-l-4 border-blue-500">
             <h4 className="font-bold text-gray-900">Butuh Bantuan?</h4>
             <p className="mt-1">
-              Untuk informasi lebih lanjut atau konsultasi, silakan hubungi kami melalui halaman <a href="/kontak" className="text-blue-600 hover:underline font-semibold">Kontak</a>.
+              Untuk informasi lebih lanjut atau konsultasi, silakan hubungi kami melalui <a href="https://wa.me/p/9621363657913044/628112663464" className="text-blue-600 hover:underline font-semibold" target="_blank" rel="noopener noreferrer">Kontak</a>.
             </p>
           </div>
         </div>
