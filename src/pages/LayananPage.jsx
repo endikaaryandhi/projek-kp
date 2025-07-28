@@ -12,42 +12,42 @@ const services = [
   {
     imgSrc: laporLogo,
     title: 'Permohonan Informasi Publik',
-    description: "Jika ingin melakukan permohonan informasi publik silahkan klik tombol di bawah",
+    description: "Jika ingin melakukan permohonan informasi publik silahkan klik tombol berikut",
     linkUrl: "https://www.lapor.go.id/",
     clickable: "true"
   },
   {
     imgSrc: dokumenlogo,
     title: 'Laboratorium Pengujian Material Bahan Jalan',
-    description: "Jika ingin mengetahui tentang alur pelayanan pengujian silahkan klik tombol di bawah",
+    description: "Jika ingin mengetahui tentang alur pelayanan pengujian silahkan klik tombol berikut",
     linkUrl: "/layanan/Laboratorium",
     clickable: "true"
   },
   {
     imgSrc: amplogo, 
     title: 'Sertifikasi Asphalt Mixing Plant (AMP)',
-    description: "Jika ingin mengetahui tentang alur sertifikasi AMP silahkan klik tombol di bawah",
+    description: "Jika ingin mengetahui tentang alur sertifikasi AMP silahkan klik tombol berikut",
     linkUrl: "/layanan/Sertifikasi",
     clickable: "true"
   },
   {
     imgSrc: oksiplogo, 
     title: 'Perizinan Pemanfaatan Bagian-Bagian Jalan Nasional',
-    description: "Jika ingin melakukan perizinan pemanfaatan bagian-bagian jalan nasional silahkan klik tombol di bawah",
+    description: "Jika ingin melakukan perizinan pemanfaatan bagian-bagian jalan nasional silahkan klik tombol berikut",
     linkUrl: "https://oksip.pu.go.id",
     clickable: "true"
   },
   {
     imgSrc: alatlogo, 
     title: 'Peminjaman Peralatan Konstruksi dengan Cara Sewa',
-    description: "Jika ingin mengetahui tentang alur sertifikasi AMP silahkan klik tombol di bawah",
+    description: "Jika ingin melakukan peminjaman alat konstruksi dengan cara sewa silahkan klik tombol berikut",
     linkUrl: "/layanan/Peminjaman",
     clickable: "true"
   },
   {
     imgSrc: pengaduanlogo,
     title: 'Pengaduan',
-    description: "Jika ingin mengetahui tentang alur sertifikasi AMP silahkan klik tombol di bawah",
+    description: "Jika ingin menyampaikan aduan terkait jalan dan infrastruktur silahkan klik tombol berikut",
     linkUrl: "/pengaduan",
     clickable: "true"
   },
