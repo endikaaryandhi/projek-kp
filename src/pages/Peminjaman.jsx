@@ -60,6 +60,29 @@ const AmpPage = () => {
             <li>PENYEWA & KOORDINATOR PERALATAN BBPJN JATENG - DIY Berita Acara Serah Terima Pengembalian Peralatan.</li>
           </ol>
 
+          <div className="mt-6 text-lg text-gray-800 space-y-2">
+            <p>
+              Surat permohonan dapat dikirimkan melalui email ke:{' '}
+              <a 
+                href="mailto:bbpjn_jatengdiy@pu.go.id" 
+                className="text-blue-600 hover:underline font-semibold"
+              >
+                bbpjn_jatengdiy@pu.go.id
+              </a>
+            </p>
+            <p>
+              Alur dan contoh surat permohonan dapat diakses melalui:{' '}
+              <a 
+                href="https://s.pu.go.id/OTEw/SewaPeralatanBBPJNJTGDIY" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-blue-600 hover:underline font-semibold"
+              >
+                https://s.pu.go.id/OTEw/SewaPeralatanBBPJNJTGDIY
+              </a>
+            </p>
+          </div>
+
           <div className="mt-10 p-6 bg-blue-50 border-l-4 border-blue-500">
             <h4 className="font-bold text-gray-900">Butuh Bantuan?</h4>
             <p className="mt-1">

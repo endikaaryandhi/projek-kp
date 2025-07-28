@@ -40,8 +40,7 @@ const Pengaduan = () => {
             Pengaduan
           </h1>
           <p className="text-base md:text-lg leading-relaxed text-justify">
-            Halaman ini merupakan halaman Pengaduan yang berisikan
-            pengaduan-pengaduan yang ada pada BBPJN Jateng - DIY
+            Halaman ini menyediakan informasi dan akses untuk menyampaikan pengaduan terkait infrastruktur dan jalan nasional di wilayah kerja BBPJN Jawa Tengah - D.I. Yogyakarta. Masyarakat dapat memilih saluran pengaduan yang tersedia sesuai kebutuhan.
           </p>
         </div>
       </div>

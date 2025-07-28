@@ -1,6 +1,6 @@
 import React from 'react';
-import labmatebg from '../assets/labmate.png'; // <-- Ganti dengan path gambar latar belakang Anda
-import Dokumen from '../assets/dokumen.png'; // <-- Ganti dengan path ikon Anda
+import labmatebg from '../assets/labmate.png'; 
+import Dokumen from '../assets/dokumen.png'; 
 import pelayanan from '../assets/pelyanan-pengujian.png';
 
 const AmpPage = () => {
@@ -11,16 +11,10 @@ const AmpPage = () => {
         className="relative h-80 bg-cover bg-center flex items-center"
         style={{ backgroundImage: `url(${labmatebg})` }}
       >
-        {/* Lapisan Overlay Biru */}
         <div className="absolute inset-0 bg-blue-900 bg-opacity-60"></div>
-
-        {/* Konten Hero */}
         <div className="container mx-auto px-6 relative z-10 flex items-center space-x-8">
-          {/* Lingkaran Ikon */}
           <div className="bg-yellow-400 p-6 rounded-full flex justify-center items-center shadow-lg">
-            {/* Ganti dengan komponen ikon atau tag img Anda */}
             <img src={Dokumen} alt="AMP Icon" className="h-16 w-16" />
-            {/* Contoh jika menggunakan react-icons: <FaIndustry className="text-black h-16 w-16" /> */}
           </div>
           
           {/* Teks Judul */}
@@ -62,6 +56,18 @@ const AmpPage = () => {
             <li>DIV ADM UPPS menyampaikan hasil Laporan Hasil Pengujian kepada Pemohon.</li>
             <li>DIV MUTU menyampaikan Umpan Balik & Pengaduan kepada Pemohon.</li>
           </ol>
+
+          <div className="mt-6 text-lg text-gray-800 space-y-2">
+            <p>
+              Konsultasi Pengujian ke Petugas Lab Kami melalui Whatsapp ke:{' '}
+              <a 
+                href="https://wa.me/6285711751505" 
+                className="text-blue-600 hover:underline font-semibold"
+              >
+                +62 857-1175-1505
+              </a>
+            </p>
+          </div>
 
           <div className="mt-10 p-6 bg-blue-50 border-l-4 border-blue-500">
             <h4 className="font-bold text-gray-900">Butuh Bantuan?</h4>

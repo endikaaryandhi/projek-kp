@@ -72,8 +72,7 @@ const LayananPage = () => {
             Layanan
           </h1>
           <p className="text-base md:text-lg leading-relaxed text-justify">
-            Halaman ini merupakan halaman Pengaduan yang berisikan <r/>
-            layanan-layanan yang ada pada BPPJN Jatebg-DIY 
+            Halaman ini berisi informasi mengenai berbagai layanan pengaduan dan dukungan teknis yang disediakan oleh BBPJN Jawa Tengah - D.I. Yogyakarta untuk masyarakat. Silakan pilih saluran layanan yang sesuai dengan kebutuhan Anda. <r/>
           </p>
         </div>
       </div>
@@ -82,7 +81,7 @@ const LayananPage = () => {
       <div className="absolute bottom-8 right-8 z-10 text-white text-xs sm:text-sm md:text-base">
         Underpass Joglo
       </div>
-    </section>
+      </section>
 
       {/* Services Section */}
       <section className="py-10 md:py-16">

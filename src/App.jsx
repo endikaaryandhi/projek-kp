@@ -9,6 +9,7 @@ import Laboratorium from './pages/Laboratorium';
 import Sertifikasi from './pages/Sertifikasi'
 import Peminjaman from './pages/Peminjaman'
 import Beranda from './pages/Beranda'
+import Kontak from './pages/Kontak'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/layanan/Laboratorium" element={<Laboratorium />} />
             <Route path='/layanan/Sertifikasi' element={<Sertifikasi />} />
             <Route path='/layanan/Peminjaman' element={<Peminjaman />} />
+            <Route path="/kontak" element={<Kontak />} />
           </Routes>
         </main>
         <Footer />

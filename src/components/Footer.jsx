@@ -25,7 +25,7 @@ const Footer = () => {
       instagram: 'https://www.instagram.com/pu_jalan_jatengdiy/',
       youtube: 'https://youtube.com/@pu_jalan_jatengdiy?feature=shared',
     },
-    kontak: '#',
+    kontak: '/kontak',
   };
 
   return (
@@ -83,7 +83,7 @@ const Footer = () => {
           <div>
             <h3 className="text-base font-semibold border-b-2 border-yellow-400 inline-block mb-3">Kontak</h3>
             <ul className="space-y-1">
-              <li><a href={links.kontak} className="hover:text-yellow-400 transition">Kontak</a></li>
+              <li><a href="/kontak" className="hover:text-yellow-400 transition">Kontak</a></li>
             </ul>
           </div>
         </div>

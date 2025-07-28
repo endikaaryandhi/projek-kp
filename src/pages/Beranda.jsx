@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import HeroBackground from '../assets/flyover.jpeg'; 
 import PanduanImage from '../assets/panduan.png'; 
 import Survey from '../components/Survey';
 
-// FAQ 
+// Komponen FAQ tunggal
 const FaqItem = ({ question, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -33,8 +33,178 @@ const FaqItem = ({ question, children }) => {
   );
 };
 
+const faqGenres = [
+  {
+    genre: 'Laboratorium',
+    faqs: [
+      {
+        question: 'Apa itu Laboratorium Pengujian Material di BBPJN Jateng DIY?',
+        answer: 'Laboratorium Pengujian Material di BBPJN Jateng DIY adalah fasilitas yang menyediakan layanan pengujian berbagai jenis material konstruksi untuk memastikan kualitas dan kesesuaian material tersebut dengan standar yang berlaku dalam proyek pembangunan jalan dan jembatan.',
+      },
+      {
+        question: 'Bagaimana cara mengajukan permohonan pengujian material di laboratorium ini?',
+        answer: 'Pengajuan permohonan pengujian dapat dikonsultasikan ke Petugas Layanan Laboratorium melalui Whatsapp 0857-1175-1505.',
+      },
+      {
+        question: 'Apa saja parameter yang dapat diuji di laboratorium ini?',
+        answer: 'Parameter yang dapat diuji yaitu Aspal, Beton, Tanah, Agregat, Beton dan Campuran Aspal, dan Pengujian Lapangan.',
+      },
+      {
+        question: 'Apakah laboratorium penguji BBPJN Jateng - DIY sudah berpredikat ISO?',
+        answer: 'Laboratorium penguji BBPJN Jateng - DIY telah terakdreditasi SNI ISO / IEC 17025-2017. Selain itu laboratorium ini selalu dilakukan kalibrasi dan uji banding untuk mempertahankan kualitas pengujian.',
+      },
+    ],
+  },
+  {
+  genre: 'Sertifikasi AMP',
+  faqs: [
+    {
+      question: 'Apa itu Sertifikasi AMP (Asphalt Mixing Plant)?',
+      answer: 'Sertifikasi AMP (Asphalt Mixing Plant) adalah proses verifikasi dan validasi yang dilakukan oleh pihak berwenang untuk memastikan bahwa fasilitas pencampuran aspal (AMP) memenuhi standar teknis, operasional, dan kualitas yang ditetapkan.',
+    },
+    {
+      question: 'Bagaimana Alur dan Contoh Surat Permohonan mengenai Sertifikasi AMP?',
+      answer: (
+        <p>
+          Alur dan Contoh Surat Permohonan dapat diakses melalui{' '}
+          <a
+            href="https://s.id/SiapMelayani"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 underline"
+          >
+            https://s.id/SiapMelayani
+          </a>{' '}
+          dan pilih folder “SERTIFIKASI AMP”.
+        </p>
+      ),
+    },
+    {
+      question: 'Bagaimana cara mengajukan permohonan sertifikasi AMP?',
+      answer: 'Pengajuan permohonan dalam bentuk surat dapat diemail ke bbpjn_jatengdiy@pu.go.id',
+    },
+  ],
+},
+  {
+    genre: 'Kerja Praktik / Magang',
+    faqs: [
+      {
+        question: 'Siapa yang bisa mendaftar untuk kerja praktik/magang di BBPJN Jateng DIY?',
+        answer: 'Mahasiswa dari jurusan teknik sipil, teknik lingkungan, dan jurusan terkait lainnya. Kegiatan ini tidak dipungut biaya dan disesuaikan dengan ketersediaan tempat.',
+      },
+      {
+        question: 'Bagaimana syarat permohonan untuk kerja praktik/magang?',
+        answer:
+          <ul className="list-disc list-inside space-y-1">
+              <li>Surat Permohonan dari Kampus ke Kepala BBPJN Jateng-DIY</li>
+              <li>Identitas Diri (KTP dan KTM)</li>
+              <li>CV (jika ada, sertakan sertifikat/keahlian)</li>
+          </ul>
+      },
+      {
+        question: 'Bagaimana cara mengajukan Surat Permohonan?',
+        answer: 'Kirim melalui email ke bbpjn_jatengdiy@pu.go.id atau cc ke ppid.bbpjnjatengdiy@pu.go.id',
+      },
+    ],
+  },
+  {
+    genre: 'Informasi Publik',
+    faqs: [
+      {
+        question: 'Apa itu informasi publik?',
+        answer:
+          'Informasi publik adalah informasi yang berkaitan dengan penyelenggaraan negara dan/atau badan publik lainnya yang sesuai dengan Undang-Undang serta berkaitan dengan kepentingan publik.',
+      },
+      {
+      question: 'Bagaimana alur Pelayanan Informasi Publik di BBPJN Jateng - DIY?',
+      answer: (
+        <p>
+          Alur dapat diakses melalui{' '}
+          <a
+            href="https://s.id/SiapMelayani"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 underline"
+          >
+            https://s.id/SiapMelayani
+          </a>
+        </p>
+      ),
+      },
+      {
+        question: 'Apa syarat permohonan Informasi Publik?',
+        answer:
+        <ul className="list-disc list-inside space-y-1">
+          <li>Surat permohonan</li>
+          <li>Identitas pemohon (KTP/SIM/KK)</li>
+          <li>Jika mewakili badan hukum: AD/ART</li>
+          <li>Jika mewakili orang lain: Surat Kuasa + KTP pemberi kuasa</li>
+        </ul>
+      },
+      {
+        question: 'Bagaimana cara mengajukan permohonan informasi publik di BBPJN Jateng DIY?',
+        answer: 'Kirim email ke bbpjn_jatengdiy@pu.go.id atau cc ke ppid.bbpjnjatengdiy@pu.go.id',
+      },
+      {
+        question: 'Apakah ada biaya untuk mengakses informasi publik?',
+        answer: 'Secara umum gratis. Jika ada biaya penggandaan/pengiriman, pemohon akan diberitahu terlebih dahulu.',
+      },
+    ],
+  },
+  {
+    genre: 'Perizinan Jalan Nasional',
+    faqs: [
+      {
+        question: 'Apa itu perizinan pemanfaatan bagian-bagian jalan nasional?',
+        answer: 'Izin yang diberikan untuk kegiatan yang memanfaatkan ruang milik jalan nasional seperti reklame, utilitas, akses masuk/keluar, dll.',
+      },
+      {
+        question: 'Apa itu RUMIJA?',
+        answer:
+          'Ruang milik jalan (rumija) adalah lahan di kiri-kanan jalan yang digunakan sebagai pengaman dan untuk kebutuhan masa depan seperti pelebaran jalan atau penambahan jalur.',
+      },
+      {
+        question: 'Bagaimana alur dan proses pengajuan izin pemanfaatan jalan nasional?',
+        answer: (
+          <p>
+            Alur dapat diakses melalui{' '}
+            <a
+              href="https://bit.ly/BBPJNJTGDIYAlurPerizinan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline"
+            >
+              bit.ly/BBPJNJTGDIYAlurPerizinan
+            </a>
+          </p>
+        ),
+      },
+      {
+        question: 'Bagaimana cara mengajukan permohonan izin pemanfaatan bagian-bagian jalan nasional?',
+        answer: (
+          <p>
+            Permohonan dan pengecekan bisa dilakukan online via{' '}
+            <a
+              href="https://oksip.pu.go.id/apps/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline"
+            >
+              https://oksip.pu.go.id/apps/
+            </a>. Jam layanan: Senin–Jumat, 08.00–16.00.
+          </p>
+        ),
+      },
+    ],
+  },
+];
+
+
 const HomePage = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [genreIndex, setGenreIndex] = useState(0);
+
+  const currentGenre = faqGenres[genreIndex];
 
   return (
     <div className="bg-white">
@@ -63,6 +233,9 @@ const HomePage = () => {
               </span>
             </a>    
           </div>
+        </div>
+        <div className="absolute bottom-8 right-8 z-10 text-white text-xs sm:text-sm md:text-base">
+          Flyover Madukoro Semarang
         </div>
       </section>
 
@@ -103,26 +276,47 @@ const HomePage = () => {
         </div>
       </section>
       
-      {/* FAQ */}
-      <section className="py-10 bg-gray-50">
+            {/* FAQ Dinamis dengan Panah Navigasi */}
+      <section className="py-10 bg-gray-50 transition-all duration-500">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center">FAQs</h2>
+          <h2 className="text-4xl font-bold text-gray-800 mb-4 text-center">FAQs</h2>
+          
+          {/* Navigasi Genre */}
+          <div className="grid grid-cols-3 items-center justify-between mb-6 text-center">
+          <div className="flex justify-start">
+            <button
+              onClick={() => setGenreIndex((prev) => (prev - 1 + faqGenres.length) % faqGenres.length)}
+              className="text-3xl text-blue-700 hover:text-blue-900 transition"
+              aria-label="Sebelumnya"
+            >
+              &larr;
+            </button>
+          </div>
+
+          <div>
+            <span className="text-xl font-semibold text-blue-600 uppercase tracking-wider">
+              {currentGenre.genre}
+            </span>
+          </div>
+
+          <div className="flex justify-end">
+            <button
+              onClick={() => setGenreIndex((prev) => (prev + 1) % faqGenres.length)}
+              className="text-3xl text-blue-700 hover:text-blue-900 transition"
+              aria-label="Berikutnya"
+            >
+              &rarr;
+            </button>
+          </div>
+        </div>
+
+          {/* Daftar FAQ */}
           <div className="space-y-2">
-            <FaqItem question="Ada apa saja pada pelayanan">
-              <p>Jawaban untuk pertanyaan ini akan ditampilkan di sini ketika pengguna mengklik.</p>
-            </FaqItem>
-            <FaqItem question="Ada apa saja pada pelayanan">
-              <p>Ini adalah jawaban untuk pertanyaan kedua. Anda bisa memasukkan konten HTML apa pun di sini.</p>
-            </FaqItem>
-            <FaqItem question="Ada apa saja pada pelayanan">
-              <p>Jawaban untuk pertanyaan ketiga.</p>
-            </FaqItem>
-            <FaqItem question="Ada apa saja pada pelayanan">
-              <p>Jawaban untuk pertanyaan keempat.</p>
-            </FaqItem>
-            <FaqItem question="Ada apa saja pada pelayanan">
-              <p>Jawaban untuk pertanyaan kelima.</p>
-            </FaqItem>
+            {currentGenre.faqs.map((faq, index) => (
+              <FaqItem key={index} question={faq.question}>
+                <p>{faq.answer}</p>
+              </FaqItem>
+            ))}
           </div>
         </div>
       </section>
