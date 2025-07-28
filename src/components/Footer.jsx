@@ -73,7 +73,7 @@ const Footer = () => {
               className="block leading-relaxed hover:text-yellow-400 transition text-justify"
             >
               BBPJN Jawa Tengah - DI Yogyakarta<br />
-              Jl. Soekarno–Hatta Km.26, Bergas,<br />
+              Jl. Soekarno - Hatta Km.26, Bergas,<br />
               Kabupaten Semarang<br />
               Jawa Tengah
             </button>
@@ -90,7 +90,16 @@ const Footer = () => {
 
         {/* Garis bawah */}
         <div className="mt-8 border-t border-gray-700 pt-4 text-center text-xs text-gray-300">
-          © {new Date().getFullYear()} BBPJN JATENG DIY. All rights reserved.
+          © {new Date().getFullYear()}{' '}
+          <a
+            href="https://binamarga.pu.go.id/balai-jateng-diy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:underline"
+          >
+            BBPJN JATENG DIY
+          </a>
+          . All rights reserved.
         </div>
       </div>
 

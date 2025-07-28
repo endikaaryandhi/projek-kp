@@ -59,7 +59,7 @@ const KontakPage = () => {
             <div>
               <h3 className="font-semibold text-gray-900">WhatsApp:</h3>
               <a
-                href="https://wa.me/p/9621363657913044/628112663464"
+                href="https://wa.me/628112663464"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline font-semibold"
@@ -69,63 +69,68 @@ const KontakPage = () => {
             </div>
 
             <div>
-            <h3 className="font-semibold text-gray-900">Media Sosial:</h3>
-            <ul className="list-disc list-inside space-y-1">
-                <li>
-                X (Twitter):{' '}
+            <h3 className="font-semibold text-gray-900 mb-2">Media Sosial</h3>
+            <ul className="space-y-2">
+              <li className="flex">
+                <span className="w-28 font-medium text-gray-800">X (Twitter)</span>
+                <span className="mr-1">:</span>
                 <a
-                    href="https://x.com/pu_jalan_jtgdiy"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline font-semibold"
+                  href="https://x.com/pu_jalan_jtgdiy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline font-semibold"
                 >
-                    @pu_jalan_jtgdiy
+                  @pu_jalan_jtgdiy
                 </a>
-                </li>
-                <li>
-                Facebook    :{' '}
+              </li>
+              <li className="flex">
+                <span className="w-28 font-medium text-gray-800">Facebook</span>
+                <span className="mr-1">:</span>
                 <a
-                    href="https://facebook.com/PUJalanJatengdiy"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline font-semibold"
+                  href="https://facebook.com/PUJalanJatengdiy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline font-semibold"
                 >
-                    @PUJalanJatengdiy
+                  @PUJalanJatengdiy
                 </a>
-                </li>
-                <li>
-                Instagram   :{' '}
+              </li>
+              <li className="flex">
+                <span className="w-28 font-medium text-gray-800">Instagram</span>
+                <span className="mr-1">:</span>
                 <a
-                    href="https://instagram.com/pu_jalan_jatengdiy"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline font-semibold"
+                  href="https://instagram.com/pu_jalan_jatengdiy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline font-semibold"
                 >
-                    @pu_jalan_jatengdiy
+                  @pu_jalan_jatengdiy
                 </a>
-                </li>
-                <li>
-                YouTube :{' '}
+              </li>
+              <li className="flex">
+                <span className="w-28 font-medium text-gray-800">YouTube</span>
+                <span className="mr-1">:</span>
                 <a
-                    href="https://youtube.com/@pu_jalan_jatengdiy"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline font-semibold"
+                  href="https://youtube.com/@pu_jalan_jatengdiy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline font-semibold"
                 >
-                    @pu_jalan_jatengdiy
+                  @pu_jalan_jatengdiy
                 </a>
-                </li>
-                <li>
-                TikTok  :{' '}
+              </li>
+              <li className="flex">
+                <span className="w-28 font-medium text-gray-800">TikTok</span>
+                <span className="mr-1">:</span>
                 <a
-                    href="https://tiktok.com/@pu_jalan_jatengdiy"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline font-semibold"
+                  href="https://tiktok.com/@pu_jalan_jatengdiy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline font-semibold"
                 >
-                    @pu_jalan_jatengdiy
+                  @pu_jalan_jatengdiy
                 </a>
-                </li>
+              </li>
             </ul>
             </div>
           </div>

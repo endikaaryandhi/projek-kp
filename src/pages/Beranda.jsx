@@ -25,7 +25,7 @@ const FaqItem = ({ question, children }) => {
         </svg>
       </button>
       {isOpen && (
-        <div className="pb-4 px-2 text-gray-600 text-base md:text-lg">
+        <div className="pb-4 px-2 text-gray-600 text-sm md:text-base text-justify">
           {children}
         </div>
       )}
