@@ -12,12 +12,12 @@ const SurveyPage = () => {
     const formData = new FormData(form);
 
     try {
-      const responseScript = await fetch("https://script.google.com/macros/s/AKfycbyYE1NctN4xf--qMQ7UYwNlB6O6EVRbS3QQdFUMHrGYzUu5JouFfNdov-tYWe2XZW3X/exec", {
+      const responseScript = await fetch("https://script.google.com/macros/s/AKfycbwr7PEGS3_HyMDgWW3R0u_akyBf_Ra-KOYGlV809hSXyTYEtiZ3bqE01nH3VjlDPHqBPw/exec", {
         method: "POST",
         body: formData,
       });
 
-      const responseEmail = await fetch("https://formsubmit.co/ajax/drivezthru@gmail.com", {
+      const responseEmail = await fetch("https://formsubmit.co/ajax/jtgdiybbpjn@gmail.com", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -98,80 +98,31 @@ const SurveyPage = () => {
             <input name="Pendidikan Terakhir" required className="w-full border p-2 rounded-md mt-1" />
           </div>
 
-          {/* Pertanyaan 1–9 */}
+          {/* Pertanyaan 1–9 (dengan skala kepuasan) */}
           {[
-            "1. Bagaimana pendapat Saudara tentang kesesuaian persyaratan pelayanan dengan jenis pelayanannya?",
-            "2. Bagaimana pemahaman Saudara tentang kemudahan prosedur pelayanan di unit ini?",
-            "3. Bagaimana pendapat Saudara tentang ketepatan waktu dalam memberikan pelayanan?",
-            "4. Bagaimana pendapat Saudara tentang kewajaran biaya/tarif dalam pelayanan?",
-            "5. Bagaimana pendapat Saudara tentang kesesuaian produk pelayanan antara yang tercantum dalam standar pelayanan dengan hasil yang diberikan?",
-            "6. Bagaimana pendapat Saudara tentang kompetensi/kemampuan petugas dalam pelayanan?",
-            "7. Bagamana pendapat Saudara perilaku petugas dalam pelayanan terkait kesopanan dan keramahan?",
-            "8. Bagaimana pendapat Saudara tentang kualitas sarana dan prasarana pelayanan?",
-            "9. Bagaimana pendapat Saudara tentang penanganan pengaduan pengguna layanan?",
+            "1. Seberapa puas Saudara terhadap kesesuaian persyaratan pelayanan dengan jenis pelayanannya?",
+            "2. Seberapa puas Saudara terhadap kemudahan prosedur pelayanan di unit ini?",
+            "3. Seberapa puas Saudara terhadap ketepatan waktu dalam memberikan pelayanan?",
+            "4. Seberapa puas Saudara terhadap kewajaran biaya/tarif dalam pelayanan?",
+            "5. Seberapa puas Saudara terhadap kesesuaian produk pelayanan antara standar dan hasil yang diberikan?",
+            "6. Seberapa puas Saudara terhadap kompetensi/kemampuan petugas dalam memberikan pelayanan?",
+            "7. Seberapa puas Saudara terhadap sikap petugas dalam hal kesopanan dan keramahan?",
+            "8. Seberapa puas Saudara terhadap kualitas sarana dan prasarana pelayanan?",
+            "9. Seberapa puas Saudara terhadap penanganan pengaduan pengguna layanan?",
           ].map((question, index) => {
-            const optionsList = [
-              [
-                "Tidak Sesuai",
-                "Kurang Sesuai",
-                "Sesuai",
-                "Sangat Sesuai"
-              ],
-              [
-                "Tidak mudah",
-                "Kurang Mudah",
-                "Mudah",
-                "Sangat Mudah"
-              ],
-              [
-                "Tidak Tepat",
-                "Kurang Tepat",
-                "Tepat",
-                "Sangat Tepat"
-              ],
-              [
-                "Tidak Wajar",
-                "Kurang Wajar",
-                "Wajar",
-                "Sangat Wajar"
-              ],
-              [
-                "Tidak Sesuai",
-                "Kurang Sesuai",
-                "Sesuai",
-                "Sangat Sesuai"
-              ],
-              [
-                "Tidak Kompeten",
-                "Kurang Kompeten",
-                "Kompeten",
-                "Sangat Kompeten"
-              ],
-              [
-                "Tidak sopan dan tidak ramah",
-                "Kurang sopan dan kurang ramah",
-                "Sopan dan ramah",
-                "Sangat sopan dan sangat ramah"
-              ],
-              [
-                "Buruk",
-                "Cukup",
-                "Baik",
-                "Sangat Baik"
-              ],
-              [
-                "Tidak ada",
-                "Ada tetapi tidak berfungsi",
-                "Berfungsi kurang maksimal",
-                "Dikelola dengan baik"
-              ]
+            const options = [
+              "Tidak Puas",
+              "Kurang Puas",
+              "Cukup Puas",
+              "Puas",
+              "Sangat Puas"
             ];
 
             return (
               <div key={index}>
                 <label className="font-semibold block mb-1">{question} <span className="text-red-500">*</span></label>
                 <div className="space-y-2 mt-1">
-                  {optionsList[index].map((option) => (
+                  {options.map((option) => (
                     <label key={option} className="flex items-center gap-2">
                       <input
                         type="radio"
