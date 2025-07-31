@@ -1,4 +1,3 @@
-// Pengaduan.jsx
 import React from "react";
 import jalanKitaLogo from "../assets/jalankita.png";
 import laporLogo from "../assets/lapor.png";
@@ -25,15 +24,11 @@ const services = [
 const Pengaduan = () => {
   return (
     <div className="bg-white font-sans text-sm text-gray-800 min-h-screen">
-    {/* Hero Section */}
     <section
       className="relative h-[25rem] md:h-[37rem] bg-cover bg-center flex items-center justify-start"
       style={{ backgroundImage: `url(${bgHeader})` }}
     >
-      {/* Overlay gradasi dari kiri ke kanan */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#0A1E5D]/90 via-[#1337AD]/20 to-transparent"></div>
-
-      {/* Konten kiri */}
       <div className="relative z-10 text-white text-left px-4 sm:px-8 md:px-12 max-w-2xl w-full">
         <div className="ml-0 sm:ml-8 md:ml-16 lg:ml-24">
           <h1 className="text-2xl md:text-5xl font-bold mb-10 text-justify">
@@ -44,8 +39,6 @@ const Pengaduan = () => {
           </p>
         </div>
       </div>
-
-      {/* Teks pojok kanan bawah */}
       <div className="absolute bottom-8 right-8 z-10 text-white text-xs sm:text-sm md:text-base">
         Flyover Canguk Magelang
       </div>

@@ -1,6 +1,6 @@
 import React from 'react';
-import labmatebg from '../assets/labmate.png'; // <-- Ganti dengan path gambar latar belakang Anda
-import amplogo from '../assets/amp.png'; // <-- Ganti dengan path ikon Anda
+import AMPbg from '../assets/amp2.png'; 
+import amplogo from '../assets/amp.png'; 
 import sertifikasi from '../assets/Sertifikasi-AMP.png';
 
 const AmpPage = () => {
@@ -9,21 +9,15 @@ const AmpPage = () => {
       {/* Bagian Hero */}
       <section 
         className="relative h-80 bg-cover bg-center flex items-center"
-        style={{ backgroundImage: `url(${labmatebg})` }}
+        style={{ backgroundImage: `url(${AMPbg})` }}
       >
-        {/* Lapisan Overlay Biru */}
         <div className="absolute inset-0 bg-blue-900 bg-opacity-60"></div>
 
         {/* Konten Hero */}
         <div className="container mx-auto px-6 relative z-10 flex items-center space-x-8">
-          {/* Lingkaran Ikon */}
           <div className="bg-yellow-400 p-6 rounded-full flex justify-center items-center shadow-lg">
-            {/* Ganti dengan komponen ikon atau tag img Anda */}
             <img src={amplogo} alt="AMP Icon" className="h-16 w-16" />
-            {/* Contoh jika menggunakan react-icons: <FaIndustry className="text-black h-16 w-16" /> */}
           </div>
-          
-          {/* Teks Judul */}
           <h1 className="text-4xl md:text-5xl font-bold text-white tracking-wide">
             Sertifikasi Asphalt Mixing Plant (AMP)
           </h1>

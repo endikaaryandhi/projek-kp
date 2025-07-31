@@ -62,10 +62,7 @@ const LayananPage = () => {
       className="relative h-[25rem] md:h-[37rem] bg-cover bg-center flex items-center justify-start"
       style={{ backgroundImage: `url(${bgHeader})` }}
     >
-      {/* Overlay gradasi dari kiri ke kanan */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#0A1E5D]/90 via-[#1337AD]/20 to-transparent"></div>
-
-      {/* Konten kiri */}
       <div className="relative z-10 text-white text-left px-4 sm:px-8 md:px-12 max-w-2xl w-full">
         <div className="ml-0 sm:ml-8 md:ml-16 lg:ml-24">
           <h1 className="text-2xl md:text-5xl font-bold mb-10 text-justify">
@@ -76,14 +73,11 @@ const LayananPage = () => {
           </p>
         </div>
       </div>
-
-      {/* Teks pojok kanan bawah */}
       <div className="absolute bottom-8 right-8 z-10 text-white text-xs sm:text-sm md:text-base">
         Underpass Joglo
       </div>
       </section>
 
-      {/* Services Section */}
       <section className="py-10 md:py-16">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-[#0D246D] mb-4">

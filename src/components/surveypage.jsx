@@ -98,7 +98,6 @@ const SurveyPage = () => {
             <input name="Pendidikan Terakhir" required className="w-full border p-2 rounded-md mt-1" />
           </div>
 
-          {/* Pertanyaan 1–9 (dengan skala kepuasan) */}
           {[
             "1. Seberapa puas Saudara terhadap kesesuaian persyaratan pelayanan dengan jenis pelayanannya?",
             "2. Seberapa puas Saudara terhadap kemudahan prosedur pelayanan di unit ini?",

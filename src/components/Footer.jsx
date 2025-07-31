@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaInstagram,  FaYoutube } from "react-icons/fa"; // Fa = Font Awesome
+import { FaInstagram,  FaYoutube } from "react-icons/fa";
 
 const YouTubeIcon = () => (
   <svg

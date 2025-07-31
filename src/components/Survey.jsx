@@ -8,7 +8,6 @@ function Survey() {
       <Toaster position="top-center" reverseOrder={false} />
 
       <div className="max-w-5xl mx-auto p-4 mt-4">
-        {/* Header */}
         <div className="flex justify-center items-center gap-2">
           <img
             src="/logo-BBPJN.png"
@@ -24,12 +23,10 @@ function Survey() {
 
         <hr className="border-t-2 border-gray-300 mt-4" />
 
-        {/* Main Content */}
         <main className="my-6">
           <SurveyPage />
         </main>
 
-        {/* Footer */}
         <footer className="text-center text-sm text-blue-800">
           Copyright ©️ 2025{" "}
           <a
