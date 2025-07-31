@@ -3,7 +3,6 @@ import HeroBackground from '../assets/flyover.jpeg';
 import PanduanImage from '../assets/panduan.png'; 
 import Survey from '../components/Survey';
 
-// Komponen FAQ tunggal
 const FaqItem = ({ question, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 

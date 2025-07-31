@@ -1,36 +1,27 @@
 import React from 'react';
-import Alatalat from '../assets/alatalat.png'; // <-- Ganti dengan path gambar latar belakang Anda
-import Alatlogo from '../assets/alat.png'; // <-- Ganti dengan path ikon Anda
+import Alatalat from '../assets/alatalat.png'; 
+import Alatlogo from '../assets/alat.png';
 import kontruksi from '../assets/konstruksi.png';
 
 const AmpPage = () => {
   return (
     <div className="bg-white">
-      {/* Bagian Hero */}
       <section 
         className="relative h-80 bg-cover bg-center flex items-center"
         style={{ backgroundImage: `url(${Alatalat})` }}
       >
-        {/* Lapisan Overlay Biru */}
         <div className="absolute inset-0 bg-blue-900 bg-opacity-60"></div>
-
-        {/* Konten Hero */}
         <div className="container mx-auto px-6 relative z-10 flex items-center space-x-8">
-          {/* Lingkaran Ikon */}
           <div className="bg-yellow-400 p-6 rounded-full flex justify-center items-center shadow-lg">
-            {/* Ganti dengan komponen ikon atau tag img Anda */}
             <img src={Alatlogo} alt="AMP Icon" className="h-16 w-16" />
-            {/* Contoh jika menggunakan react-icons: <FaIndustry className="text-black h-16 w-16" /> */}
           </div>
           
-          {/* Teks Judul */}
           <h1 className="text-4xl md:text-5xl font-bold text-white tracking-wide">
             Peminjaman Peralatan Konstruksi dengan Cara Sewa
           </h1>
         </div>
       </section>
 
-      {/* Bagian Konten */}
       <section className="py-16">
         <div className="container mx-auto px-6 text-gray-800">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">

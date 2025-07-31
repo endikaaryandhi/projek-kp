@@ -23,7 +23,6 @@ const Navbar = () => {
       transition={{ type: 'spring', stiffness: 80, damping: 20 }}
     >
         <div className="relative flex items-center justify-between">
-        {/* Hamburger di ujung kanan */}
         <button
           className="absolute right-4 top-4 md:hidden text-gray-700 z-10"
           onClick={toggleMenu}
@@ -39,7 +38,6 @@ const Navbar = () => {
         </div>
 
         <div className="relative flex items-center justify-between">
-        {/* Logo ujung kiri */}
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
             <img src={logo} alt="Logo" className="h-10 sm:h-11 md:h-12 lg:h-14 cursor-pointer" />
@@ -48,7 +46,6 @@ const Navbar = () => {
           <div className="max-w-screen-xl mx-auto flex justify-between items-center">
         </div>
 
-        {/* Menu Desktop */}
         <ul className="hidden md:flex items-center space-x-6">
           {links.map(({ name, path }) => {
             const isActive = location.pathname === path;
@@ -68,7 +65,6 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Menu Mobile (Animated) */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div

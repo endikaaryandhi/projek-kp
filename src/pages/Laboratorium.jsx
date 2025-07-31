@@ -16,8 +16,6 @@ const AmpPage = () => {
           <div className="bg-yellow-400 p-6 rounded-full flex justify-center items-center shadow-lg">
             <img src={Dokumen} alt="AMP Icon" className="h-16 w-16" />
           </div>
-          
-          {/* Teks Judul */}
           <h1 className="text-4xl md:text-5xl font-bold text-white tracking-wide">
             Laboratorium Pengujian Material Bahan Jalan
           </h1>

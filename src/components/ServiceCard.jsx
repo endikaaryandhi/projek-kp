@@ -6,8 +6,6 @@ const ServiceCard = ({ imgSrc, title, description, linkUrl, linkText, clickable 
 
   const CardContent = () => (
   <div className="relative h-56 w-full rounded-xl shadow-md transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-
-    {/* Front */}
     <div className="absolute inset-0 bg-white p-6 rounded-xl border border-gray-200 [backface-visibility:hidden]">
       <div className="flex flex-col items-center justify-center h-full text-center">
         <img src={imgSrc} alt={title} className="h-20 mb-5 object-contain" />
@@ -16,13 +14,10 @@ const ServiceCard = ({ imgSrc, title, description, linkUrl, linkText, clickable 
         </h3>
       </div>
     </div>
-
-    {/* Back */}
     <div className="absolute inset-0 bg-white p-6 rounded-xl border border-gray-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
       <div className="flex flex-col items-center justify-center h-full text-center gap-2">
         <p className="text-sm text-gray-700">{description}</p>
 
-        {/* Tampilkan tombol biru hanya jika tidak clickable */}
         {!clickable && (
           isExternal ? (
             <a
@@ -49,8 +44,6 @@ const ServiceCard = ({ imgSrc, title, description, linkUrl, linkText, clickable 
   </div>
 );
 
-
-  // Wrapper logika
   if (clickable) {
     if (isExternal) {
       return (
