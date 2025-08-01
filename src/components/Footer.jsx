@@ -31,14 +31,15 @@ const Footer = () => {
   return (
     <footer className="bg-[#0D246D] text-white font-sans text-sm relative z-10 rounded-t-[6rem]">
       <div className="max-w-screen-xl mx-auto px-4 md:px-6 py-6 text-center">
+        
 
         {/* Grid Container */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-4 md:gap-8 justify-items-center">
           
           {/* Kolom 1: Profil */}
           <div>
-            <h3 className="text-base font-semibold border-b-2 border-yellow-400 inline-block mb-3">Profil</h3>
-            <ul className="space-y-1 text-justify">
+            <h3 className="text-sm md:text-base font-semibold border-b-2 border-yellow-400 inline-block mb-3">Profil</h3>
+            <ul className="space-y-1 text-center md:text-justify">
               <li><a href={links.profil.visiMisi} className="hover:text-yellow-400 transition">Visi & Misi</a></li>
               <li><a href={links.profil.struktur} className="hover:text-yellow-400 transition">Struktur Organisasi</a></li>
               <li><a href={links.profil.sejarah} className="hover:text-yellow-400 transition">Sejarah</a></li>
@@ -48,7 +49,7 @@ const Footer = () => {
 
           {/* Kolom 2: Media Sosial */}
           <div>
-            <h3 className="text-base font-semibold border-b-2 border-yellow-400 inline-block mb-3">Media Sosial</h3>
+            <h3 className="text-sm md:text-base font-semibold border-b-2 border-yellow-400 inline-block mb-3">Media Sosial</h3>
             <ul className="space-y-1 text-justify">
               <li>
                 <a href={links.sosial.instagram} className="flex items-center hover:text-yellow-400 transition space-x-2">
@@ -67,21 +68,24 @@ const Footer = () => {
 
           {/* Kolom 3: Lokasi */}
           <div>
-            <h3 className="text-base font-semibold border-b-2 border-yellow-400 inline-block mb-3">Lokasi</h3>
+            <h3 className="text-sm md:text-base font-semibold border-b-2 border-yellow-400 inline-block mb-3">Lokasi</h3>
             <button
               onClick={() => setShowMap(true)}
               className="block leading-relaxed hover:text-yellow-400 transition text-justify"
             >
-              BBPJN Jawa Tengah - DI Yogyakarta<br />
-              Jl. Soekarno - Hatta Km.26, Bergas,<br />
-              Kabupaten Semarang<br />
-              Jawa Tengah
+              {/* Mobile: hanya "Lokasi", Desktop: alamat lengkap */}
+              <span className="block md:hidden">Lokasi</span>
+              <span className="hidden md:block">
+                BBPJN Jawa Tengah - DI Yogyakarta<br />
+                Jl. Soekarno - Hatta Km.26, Bergas,<br />
+                Kabupaten Semarang<br />
+                Jawa Tengah
+              </span>
             </button>
           </div>
-
           {/* Kolom 4: Kontak */}
           <div>
-            <h3 className="text-base font-semibold border-b-2 border-yellow-400 inline-block mb-3">Kontak</h3>
+            <h3 className="text-sm md:text-base font-semibold border-b-2 border-yellow-400 inline-block mb-3">Kontak</h3>
             <ul className="space-y-1">
               <li><a href="/kontak" className="hover:text-yellow-400 transition">Kontak</a></li>
             </ul>
@@ -89,7 +93,7 @@ const Footer = () => {
         </div>
 
         {/* Garis bawah */}
-        <div className="mt-8 border-t border-gray-700 pt-4 text-center text-xs text-gray-300">
+        <div className="mt-4 md:mt-8 border-t border-gray-700 pt-4 text-center text-xs text-gray-300">
           © {new Date().getFullYear()}{' '}
           <a
             href="https://binamarga.pu.go.id/balai-jateng-diy"

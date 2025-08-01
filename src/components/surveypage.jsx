@@ -42,10 +42,10 @@ const SurveyPage = () => {
     <div className="h-screen overflow-y-auto bg-gray-100  py-6">
       <div className="w-full max-w-5xl bg-white shadow-xl p-6 sm:p-10 font-sans text-gray-800 relative mx-auto">
         <Toaster position="top-center" />
-        <h1 className="text-2xl font-bold mb-1 text-justify">Survei Kepuasan Masyarakat BBPJN Jawa Tengah – DIY</h1>
-        <p className="text-sm text-gray-600 mb-4 text-justify">Kami sangat menghargai kepercayaan dan dukungan Anda terhadap layanan kami. Untuk meningkatkan kualitas pelayanan publik, kami mengundang Anda untuk meluangkan sedikit waktu dalam mengisi survei kepuasan pengguna berikut ini. Masukan Anda sangat berarti bagi perbaikan dan pengembangan layanan ke depannya.</p>
+        <h1 className="text-lg mb:text-2xl font-bold mb-1 text-justify">Survei Kepuasan Masyarakat BBPJN Jawa Tengah – DIY</h1>
+        <p className="text-xs mb:text-sm text-gray-600 mb-4 text-justify">Kami sangat menghargai kepercayaan dan dukungan Anda terhadap layanan kami. Untuk meningkatkan kualitas pelayanan publik, kami mengundang Anda untuk meluangkan sedikit waktu dalam mengisi survei kepuasan pengguna berikut ini. Masukan Anda sangat berarti bagi perbaikan dan pengembangan layanan ke depannya.</p>
 
-        <form onSubmit={handleSubmit} className="space-y-6 text-sm">
+        <form onSubmit={handleSubmit} className="space-y-6 text-xs mb:text-sm">
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_subject" value="Survei Pelayanan Publik BBPJN" />
 

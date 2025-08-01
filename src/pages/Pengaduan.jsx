@@ -52,7 +52,7 @@ const Pengaduan = () => {
           </h2>
           <div className="w-24 h-1 bg-yellow-400 mx-auto mb-8 rounded-full"></div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 w-full max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-10 w-full max-w-3xl mx-auto">
             {services.map((service, index) => (
               <ServiceCard
                 key={index}

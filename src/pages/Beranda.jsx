@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import HeroBackground from '../assets/flyover.jpeg'; 
 import PanduanImage from '../assets/panduan.png'; 
 import Survey from '../components/Survey';
+import skmLogo from '../assets/skm.png';
 
 const FaqItem = ({ question, children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -214,10 +215,10 @@ const HomePage = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#0A1E5D]/90 via-[#1337AD]/20 to-transparent z-0" />
 
-        <div className="relative z-10 pl-6 md:pl-[200px]">
-          <div className="relative w-[320px] md:w-[510px] h-[100px] bg-blue-500/50 rounded-[10px]">
-            <div className="absolute top-6 left-6 w-[290px] md:w-[500px] h-[90px] bg-yellow-400/60 rounded-[10px] z-10" />
-            <div className="absolute top-10 left-6 md:left-10 text-white text-xl md:text-[48px] font-bold z-20">
+        <div className="relative z-10 pl-12 md:pl-[200px]">
+          <div className="relative w-[220px] md:w-[510px] h-[60px] md:h-[100px] bg-blue-500/50 rounded-[10px]">
+            <div className="absolute top-3 left-5 md:left-6 md:top-6 w-[210px] md:w-[500px] h-[60px] md:h-[100px] bg-yellow-400/60 rounded-[10px] z-10" />
+            <div className="absolute top-6 left-8 md:left-10 md:top-10 text-white text-xl md:text-[48px] font-bold z-20">
               Website Pelayanan
             </div>
           </div>
@@ -225,12 +226,16 @@ const HomePage = () => {
           <div className="mt-10 ml-4">
             <a
               href="/layanan"
-              className="relative inline-block rounded-full bg-gradient-to-r from-[#007AFF80] to-[#FFCC0080] p-[5px]"
+              className="relative inline-block rounded-full bg-gradient-to-r from-[#007AFF80] to-[#FFCC0080] p-[3px] sm:p-[4px] md:p-[5px]"
             >
-              <span className="block rounded-full bg-black/60 text-white font-bold py-4 px-14 text-2xl hover:bg-black/45 transition-colors duration-300">
+              <span className="block rounded-full bg-black/60 text-white font-bold 
+                py-2 px-6 text-base 
+                sm:py-3 sm:px-10 sm:text-lg 
+                md:py-4 md:px-14 md:text-2xl 
+                hover:bg-black/45 transition-colors duration-300">
                 LAYANAN
               </span>
-            </a>    
+            </a>
           </div>
         </div>
         <div className="absolute bottom-8 right-8 z-10 text-white text-xs sm:text-sm md:text-base">
@@ -275,7 +280,7 @@ const HomePage = () => {
         </div>
       </section>
       
-            {/* FAQ Dinamis dengan Panah Navigasi */}
+      {/* FAQ Dinamis dengan Panah Navigasi */}
       <section className="py-10 bg-gray-50 transition-all duration-500">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-gray-800 mb-4 text-center">FAQs</h2>
@@ -321,28 +326,34 @@ const HomePage = () => {
       </section>
 
       {/* Tombol Gambar Modal */}
-      <button
-        onClick={() => setModalOpen(true)}
-        className="fixed bottom-5 right-5 z-[9999] p-0 border-0 bg-transparent cursor-pointer"
-      >
-        <img
-          src="https://sahabat.pu.go.id/traffic/img/modal-logo.png"
-          alt="Buka Survei"
-          className="h-[100px] md:h-[150px] w-auto"
-        />
-      </button>
+      {!modalOpen && (
+        <button
+          onClick={() => setModalOpen(true)}
+          className="fixed bottom-5 right-5 z-[9999] p-0 border-0 bg-transparent cursor-pointer"
+        >
+          <img
+            src={skmLogo}
+            alt="Buka Survei"
+            className="h-[70px] md:h-[140px] w-auto"
+          />
+        </button>
+      )}
 
       {/* Modal */}
       {modalOpen && (
-        <div className="fixed inset-0 bg-black/40 z-[9998] p-4 md:p-10 flex items-center justify-center">
-          <div className="bg-white w-full max-w-[1000px] h-[90vh] rounded-2xl overflow-auto relative shadow-xl">
+        <div className="fixed inset-0 bg-black/40 z-[9998] px-4 py-24 md:p-10 flex items-center justify-center overflow-y-auto">
+          <div className="bg-white w-full max-w-4xl max-h-[95vh] h-full md:h-[90vh] rounded-2xl overflow-auto relative shadow-xl">
+            {/* Tombol Tutup */}
             <button
               onClick={() => setModalOpen(false)}
               className="absolute top-2 right-4 text-3xl font-bold text-gray-600 hover:text-gray-800"
             >
               &times;
             </button>
-            <Survey />
+            {/* Konten Survei */}
+            <div className="p-4 md:p-8">
+              <Survey />
+            </div>
           </div>
         </div>
       )}

@@ -15,7 +15,7 @@ function App() {
     <Router>
       <div className="flex flex-col min-h-screen">
         <Navbar />
-        <main className="flex-grow pt-20">
+        <main className="flex-grow pt-16 md:pt-20">
           <Routes>
             <Route path="/" element={<Beranda />} />
             <Route path="/pengaduan" element={<Pengaduan />} />

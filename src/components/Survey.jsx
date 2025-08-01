@@ -12,12 +12,12 @@ function Survey() {
           <img
             src="/logo-BBPJN.png"
             alt="BBPJN JATENG-DIY"
-            className="h-14 w-auto"
+            className="h-10 md:h-14 w-auto"
           />
           <img
             src="/Logo-Kom-A.png"
             alt="Logo Komunikasi"
-            className="h-7 w-auto"
+            className="h-5 md:h-7 w-auto"
           />
         </div>
 
